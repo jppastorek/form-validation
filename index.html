@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <div id="container">
+      <form action="" id="form">
+        <h2 class="header">Create an account.</h2>
+        <div class="form email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@example.com"
+            autofocus
+            autocomplete="email"
+          />
+        </div>
+        <div class="form password">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Choose a password"
+          />
+          <input
+            type="password"
+            name="pw-confirm"
+            id="pw-confirm"
+            placeholder="Confirm password"
+          />
+        </div>
+        <div class="form location">
+          <label for="location">Location</label>
+          <div class="location-items">
+            <input
+              type="text"
+              name="zipcode"
+              id="zipcode"
+              placeholder="Enter your zipcode"
+              autocomplete="postal-code"
+            />
+            <select name="state" id="state">
+              <option value="la">Louisiana</option>
+              <option value="ms">Mississippi</option>
+              <option value="al">Alabama</option>
+            </select>
+          </div>
+        </div>
+        <div class="form terms">
+          <input type="checkbox" name="terms" id="terms" />
+          <label id="terms-label" for="terms"
+            >I confirm that I have read the
+            <a href="#">Terms and Conditions</a>.</label
+          >
+        </div>
+
+        <button type="submit">Accept & Continue</button>
+      </form>
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </div>
+  </body>
+</html>
