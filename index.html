@@ -9,10 +9,10 @@
   </head>
   <body>
     <div id="container">
-      <form action="" id="form">
+      <form action="" id="form" novalidate>
         <h2 class="header">Create an account.</h2>
         <div class="form email">
-          <label for="email">Email</label>
+          <label for="email">Email *</label>
           <input
             type="email"
             name="email"
@@ -20,22 +20,30 @@
             placeholder="name@example.com"
             autofocus
             autocomplete="email"
+            required
           />
+          <span class="error">Please enter a valid email address.</span>
         </div>
         <div class="form password">
-          <label for="password">Password</label>
+          <label for="password">Password *</label>
           <input
             type="password"
             name="password"
             id="password"
             placeholder="Choose a password"
+            minlength="8"
+            required
           />
+          <span class="pw-error">Please enter a password of at least 8 characters.</span>
           <input
             type="password"
             name="pw-confirm"
             id="pw-confirm"
             placeholder="Confirm password"
+            minlength="8"
+            required
           />
+          <span class="error">Please make sure passwords match.</span>
         </div>
         <div class="form location">
           <label for="location">Location</label>
