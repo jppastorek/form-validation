@@ -22,7 +22,7 @@
             autocomplete="email"
             required
           />
-          <span class="error">Please enter a valid email address.</span>
+          <span class="error"></span>
         </div>
         <div class="form password">
           <label for="password">Password *</label>
@@ -34,7 +34,7 @@
             minlength="8"
             required
           />
-          <span class="pw-error">Please enter a password of at least 8 characters.</span>
+          <span class="error"></span>
           <input
             type="password"
             name="pw-confirm"
@@ -43,13 +43,13 @@
             minlength="8"
             required
           />
-          <span class="error">Please make sure passwords match.</span>
+          <span class="error"></span>
         </div>
         <div class="form location">
           <label for="location">Location</label>
           <div class="location-items">
             <input
-              type="text"
+              type="numeric"
               name="zipcode"
               id="zipcode"
               placeholder="Enter your zipcode"
@@ -70,9 +70,10 @@
           >
         </div>
 
-        <button type="submit">Accept & Continue</button>
+        <button type="submit" id="submit">Accept & Continue</button>
       </form>
       <p>Already have an account? <a href="#">Log in</a></p>
     </div>
+    <script src="./validation.js"></script>
   </body>
 </html>
