@@ -34,19 +34,18 @@ passwordConfirm.addEventListener("input", (event) => {
     }
 });
 
-
-//TODO -----This will validate one and then cancel the submission, need to figure
-//TODO -----out how to get it to validate all and show all errors necessary.
-//TODO -----Right now it doesn't show the error after clicking submit.
-submit.addEventListener("submit", (event) => {
+submit.addEventListener("click", (event) => {
     if (!email.validity.valid) {
         showError("email");
         event.preventDefault();
     }else if (!password.validity.valid) {
         showError("password");
         event.preventDefault();
+    }else if (!passwordConfirm.validity.valid) {
+        showError("pw-confirm");
+        event.preventDefault();
     }
-})
+});
 
 function showError(input) {
     if (input == "email") {
